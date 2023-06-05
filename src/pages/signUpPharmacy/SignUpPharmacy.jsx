@@ -10,7 +10,6 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import backButton from './assets/backButton.svg';
 import { useNavigate } from 'react-router';
-
 const SignUpPharmacy = () => {
   const { formToShow, setFormToShow } = useContext(SignUpContext);
   const [now, setNow] = useState(0);
@@ -33,12 +32,14 @@ const SignUpPharmacy = () => {
       setFormToShow('a');
     } else if (formToShow === 'c') {
       setFormToShow('b');
+    } else if (formToShow === 'd') {
+      setFormToShow('c');
     } else {
       navigate('/pharmacy');
     }
   };
   return (
-    <div className="signUpPharmacy">
+    <section className="signUpPharmacy">
       <div className="title-button__container">
         <img
           className="goBackButton"
@@ -53,7 +54,7 @@ const SignUpPharmacy = () => {
       {(formToShow === 'c' || formToShow === 'd') && <SignInDetails />}
       <ProgressBar now={now} variant="success" className="progressBar" />
       <Footer />
-    </div>
+    </section>
   );
 };
 

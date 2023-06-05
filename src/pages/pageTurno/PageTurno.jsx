@@ -40,7 +40,7 @@ const Turno = () => {
       (item) => item.customer.identificationNumber === identificationNumber,
     );
 
-  console.log(users[0].customer.identificationNumber);
+  console.log(users);
 //   const borrarTurn = useCallback(() => {
 // 	Swal.fire({
 // 		title: "Estas seguro?",
@@ -59,7 +59,7 @@ const Turno = () => {
 // 				showConfirmButton: false,
 // 				timer: 1500,
 // 			});
-// 			// setShow(false);
+// 			setShow(false);
 // 		}
 // 	});
 // }, []);

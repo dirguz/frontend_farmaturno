@@ -1,11 +1,25 @@
+/* *{
+  font-family: 'Roboto';
+} */
+
 .general{
-    padding: 0rem 4rem;
+    padding: 0rem 8rem;
     height: 100%;
     background-color: #FAFAFA;
     display: grid;
-    grid-template-rows: 15% 85%
+    grid-template-columns: 1fr 20fr;
+    grid-template-rows: 15% 85% !important
 }
-
+.margin{
+  margin: 2rem;
+}
+.titulo{
+  font-size: 1.5rem;
+}
+.texto{
+  font-size: 1.1rem;
+  font-family: 'Roboto';
+}
 
 .body {
    
@@ -15,12 +29,25 @@
     grid-template-columns: 1fr 2fr;
     align-items: center;
   justify-content: center;
-    gap: 2rem;
+    /* gap: 2rem; */
   }
 
   .img{
-    height: 250px;
-    
+   
+    display: flex;
     align-items: center;
+    /* position: absolute; */
+/* width: 382.01px; */
+height: 30rem;
+left: 30rem;
+top: calc(50% - 360px/2);
+left: 519px;
+    top: 247px;
+    padding: 24px;
+    gap: 50px;
+    padding: 24px;
+    gap: 50px;
+
+/* transform: matrix(-1, 0, 0, 1, 0, 0); */
     
   }
