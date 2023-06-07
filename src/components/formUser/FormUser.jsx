@@ -81,7 +81,7 @@ const FormUser = () => {
       isTurnoDisponible: true,
     }));
 
-    handleClose();
+    // handleClose();
   };
 
   const validateField = (name, value) => {
@@ -226,7 +226,7 @@ const FormUser = () => {
           <p className="mb-0 info">/Direccion</p>
           <p className="mb-3 info">/Horario de atencion</p>
           <Row className=" mb-3">
-            <Form.Group  as={Col } xs={12} md={6} controlId="formGridName">
+            <Form.Group className='mb-3' as={Col } xs={12} md={6} controlId="formGridName">
               <Form.Label className="texto">Nombre</Form.Label>
               <Form.Control
                 className="form"
@@ -331,8 +331,8 @@ const FormUser = () => {
       {/* modal elegir horario */}
 
       <Modal show={show} onHide={handleClose} centered>
-        <Modal.Header closeButton>
-          <Modal.Title>Elige un horario</Modal.Title>
+        <Modal.Header >
+          <Modal.Title className='mx-auto'>Elige un horario</Modal.Title>
         </Modal.Header>
         <Modal.Body className="modal">
           {horarios.map((hora, idx) => (
@@ -344,7 +344,7 @@ const FormUser = () => {
               variant="success"
               name="hour"
               data-value={hora.value}
-              checked={formData.hour === hora.value}
+              checked={formData.hour === hora.name}
               // onChange={(e) => setRadioValue(e.currentTarget.value)}
               onClick={handlechoose}
               data-name={hora.name}
@@ -353,6 +353,13 @@ const FormUser = () => {
             </ToggleButton>
           ))}
         </Modal.Body>
+        <Modal.Footer>
+        
+          <Button className='buttonHorario mx-auto' variant='success' onClick={handleClose}>
+            Confirmar
+          </Button>
+          
+        </Modal.Footer>
       </Modal>
     </>
   );
